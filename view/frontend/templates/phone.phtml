@@ -1,0 +1,10 @@
+<?php declare(strict_types=1);
+
+use Hyva\Theme\Model\ViewModelRegistry;
+use YireoTraining\HyvaContactDetails\ViewModel\ContactDetails;
+
+/** @var ViewModelRegistry $viewModels */
+/** @var ContactDetails $contactDetails */
+$contactDetails = $viewModels->require(ContactDetails::class);
+?>
+<h1>Phone: <?= $contactDetails->getPhoneNumber() ?></h1>
